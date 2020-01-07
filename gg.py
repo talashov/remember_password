@@ -6,4 +6,7 @@ password = ""
 for x in range(8, 23):
     password = password + random.choice(chars)
 print("Ваш парооль от " + name + ": " + password)
-input("Нажми Enter для выхода")
+#Создание текстового файла и запись пароля
+file = open('pass.txt', 'a')
+file.write("\nВаш парооль от " + name + ": " + password)
+file.close()
